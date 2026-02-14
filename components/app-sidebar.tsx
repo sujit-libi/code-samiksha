@@ -136,7 +136,7 @@ export const AppSidebar = () => {
                   size="lg"
                   className="h-12 px-4 rounded-lg data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground hover:bg-sidebar-accent/50 transition-colors"
                 >
-                  <Avatar className="h-10 w-10 roundedlg shrink-0">
+                  <Avatar className="h-10 w-10 rounded-lg shrink-0">
                     <AvatarImage
                       src={userAvatar || '/placeholder.svg'}
                       alt={userName}
@@ -163,7 +163,7 @@ export const AppSidebar = () => {
                 sideOffset={8}
               >
                 <div className="flex items-center gap-3 px-4 py-4 bg-sidebar-accent/30 rounded-t-lg">
-                  <Avatar className="h-12 w-12 roundedlg shrink-0">
+                  <Avatar className="h-12 w-12 rounded-lg shrink-0">
                     <AvatarImage
                       src={userAvatar || '/placeholder.svg'}
                       alt={userName}
