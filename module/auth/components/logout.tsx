@@ -12,7 +12,8 @@ const Logout = ({
 }) => {
   const router = useRouter();
   return (
-    <span
+    <button
+      type="button"
       className={className}
       onClick={() =>
         signOut({
@@ -20,12 +21,16 @@ const Logout = ({
             onSuccess: () => {
               router.push('/login');
             },
+            onError: (error) => {
+              console.error('Logout failed: ', error);
+              // Optionally later showing a toast/notification to the user.
+            },
           },
         })
       }
     >
       {children}
-    </span>
+    </button>
   );
 };
 

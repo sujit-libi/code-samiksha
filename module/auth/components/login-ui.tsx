@@ -1,18 +1,21 @@
 'use client';
 import React, { useState } from 'react';
-import { signIn } from '../../../lib/auth-client';
+import { signIn } from '@/lib/auth-client';
 import { GithubIcon } from 'lucide-react';
 
 const LoginUI = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const handleGithubLogin = async () => {
     setIsLoading(true);
+    setError(null);
     try {
       await signIn.social({
         provider: 'github',
       });
     } catch (error) {
       console.error('Login failed:', error);
+      setError('Login failed. Please try again.');
     } finally {
       setIsLoading(false);
     }
