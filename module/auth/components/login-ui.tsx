@@ -65,13 +65,22 @@ const LoginUI = () => {
             <GithubIcon size={20} />
             {isLoading ? 'Signing in...' : 'Github'}
           </button>
+          {error && (
+            <p
+              role="alert"
+              aria-live="polite"
+              className="mt-2 text-sm text-red-400"
+            >
+              {error}
+            </p>
+          )}
 
           {/** Footer Links */}
           <div className="space-y-4 text-center text-sm text-gray-400">
             <div>
               New to Code Samiksha?{' '}
               <a
-                href="#"
+                href="/"
                 className="text-primary hover:text-secondary-foreground font-semibold"
               >
                 Sign Up
@@ -79,7 +88,7 @@ const LoginUI = () => {
             </div>
             <div>
               <a
-                href="#"
+                href="/"
                 className="text-primary hover:text-primary-foreground font-semibold"
               >
                 Self-Hosted Services
@@ -89,11 +98,11 @@ const LoginUI = () => {
 
           {/** Bottom Links */}
           <div className="mt-12 pt-8 border-t border-gray-700 flex justify-center gap-4 text-xs text-gray-500">
-            <a href="#" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400">
               Terms of Use
             </a>
             <span>and</span>
-            <a href="#" className="hover:text-gray-400">
+            <a href="/" className="hover:text-gray-400">
               Privacy Policy
             </a>
           </div>
