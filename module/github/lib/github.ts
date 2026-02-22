@@ -84,5 +84,6 @@ export async function fetchUserContribution(token: string, username: string) {
     return response.user.contributionsCollection.contributionCalendar;
   } catch (error) {
     console.error('Something went wrong!!!', error);
+    return null;
   }
 }
